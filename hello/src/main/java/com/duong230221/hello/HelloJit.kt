@@ -4,4 +4,8 @@ class HelloJit {
     fun runJi2sadasdasdt() {
 
     }
+
+    fun runJi2sasdasdadasdasdasdt() {
+
+    }
 }
