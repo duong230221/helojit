@@ -1,7 +1,7 @@
 package com.duong230221.hello
 
 class HelloJit {
-    fun runJit() {
+    fun runJi2t() {
 
     }
 }
