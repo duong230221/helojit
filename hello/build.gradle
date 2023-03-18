@@ -3,8 +3,9 @@ plugins {
     id 'org.jetbrains.kotlin.android'
 }
 apply plugin: 'maven-publish'
+apply plugin: 'maven-publish'
 group = 'com.duong230221'
-version = '1.0'
+version = '1.0.4'
 
 android {
     namespace 'com.duong230221.hello'
@@ -64,7 +65,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.duong230221'
             artifactId = 'hello'
-            version = '1.0'
+            version = '1.0.4'
 
             afterEvaluate {
                 from components.release
