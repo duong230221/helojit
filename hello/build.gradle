@@ -31,6 +31,11 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    publishing {
+        singleVariant('release') {
+            withSourcesJar()
+        }
+    }
 }
 
 dependencies {
@@ -44,13 +49,26 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }
 
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            groupId = 'com.duong230221'
+//            artifactId = 'hello'
+//            version = '1.0'
+//
+//        }
+//    }
+//}
 publishing {
     publications {
-        maven(MavenPublication) {
+        release(MavenPublication) {
             groupId = 'com.duong230221'
             artifactId = 'hello'
             version = '1.0'
 
+            afterEvaluate {
+                from components.release
+            }
         }
     }
 }
